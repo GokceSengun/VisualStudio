@@ -1,0 +1,73 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="Educator.master.cs" Inherits="Educator_Educator" %>
+
+<%@ Register Src="~/Usercontrols/UCHeader.ascx" TagPrefix="uc1" TagName="UCHeader" %>
+
+
+<!DOCTYPE html>
+<!--[if lt IE 7 ]><html lang="en" class="ie6 ielt7 ielt8 ielt9"><![endif]-->
+<!--[if IE 7 ]><html lang="en" class="ie7 ielt8 ielt9"><![endif]-->
+<!--[if IE 8 ]><html lang="en" class="ie8 ielt9"><![endif]-->
+<!--[if IE 9 ]><html lang="en" class="ie9"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!-->
+<html lang="en">
+<!--<![endif]-->
+<head runat="server">
+    <meta charset="utf-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="<%= Page.ResolveUrl("~/Scripts/js/jquery.min.js") %>"></script>
+    <link href="<%= Page.ResolveUrl("~/Scripts/css/bootstrap.min.css") %>" rel="stylesheet">
+    <link href="<%= Page.ResolveUrl("~/Scripts/css/bootstrap-responsive.min.css") %>" rel="stylesheet">
+    <link href="<%= Page.ResolveUrl("~/Scripts/css/style.css") %>" rel="stylesheet">
+    <!--[if lt IE 9]><script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+
+    <script src="<%= Page.ResolveUrl("~/Scripts/js/jquery.validate.js") %>"></script>
+    <asp:Literal ID="LiteralBootstrap" runat="server"></asp:Literal>
+    <script src="<%= Page.ResolveUrl("~/Scripts/js/site.js") %>"></script>
+    <script src="<%= Page.ResolveUrl("~/Scripts/js/menu-setting.js") %>"></script>
+
+    <asp:ContentPlaceHolder runat="server" ID="HeadPlaceHolder"></asp:ContentPlaceHolder>
+</head>
+<body>
+    
+    <form id="formMasterpage" runat="server">
+        <div class="container">
+            <uc1:UCHeader runat="server" ID="UCHeader" />
+            <div class="row">
+                <div class="span3">
+                    <div class="well" style="padding: 8px 0; margin-top:25px">
+                        <ul class="nav nav-list">
+                            <li class="nav-header">Scop Öğrenci Takip Sistemi 
+                            </li>
+
+                            <li></li>
+                            
+
+                            <li class="divider"></li>
+                            <li>
+                                <a href="<%= Page.ResolveUrl(Urls.Educator.MainPage) %>"><i class="icon-star"></i>Ana Sayfa</a>
+                            </li>
+
+                            <li class="divider"></li>
+                           
+                           
+                          
+                            <li>
+                                <a href="#"><i class="icon-info-sign"></i>Yardım</a>
+                            </li>
+
+                        </ul>
+                    </div>
+                </div>
+
+                <asp:ContentPlaceHolder runat="server" ID="MainPlaceHolder"></asp:ContentPlaceHolder>
+
+            </div>
+        </div>
+
+
+    </form>
+</body>
+</html>
+
+
